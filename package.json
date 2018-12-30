@@ -18,6 +18,11 @@
   "bugs": {
     "url": "https://github.com/mitaxe/smart-tickets/issues"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  },
   "homepage": "https://github.com/mitaxe/smart-tickets#readme",
   "dependencies": {
     "express": "^4.16.4",
