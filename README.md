@@ -1,2 +1,2 @@
 # smart-tickets
-Easy way to buy tickets!
+The Easiest way to buy tickets!
