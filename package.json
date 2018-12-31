@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "NODE_PATH=. NODE_ENV=production ./server/app.js",
     "test": "NODE_PATH=. jest",
-    "lint": "eslint \"./**/*.jsx\" \"./**/*.js\""
+    "lint": "eslint \"./**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
