@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_PATH=. node ./server/app.js",
     "build": "next build",
-    "start": "NODE_PATH=. ./server/app.js",
+    "start": "NODE_PATH=. node ./server/app.js",
     "test": "NODE_PATH=. jest --verbose",
     "lint": "eslint \"./**/*.{js,jsx}\""
   },
