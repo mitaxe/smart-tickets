@@ -9,7 +9,7 @@ const server = express()
 const handle = app.getRequestHandler()
 
 function applyRoutes (server) {
-  server.use(helmet)
+  server.use(helmet())
 
   server.get('/_next/*', (req, res) => {
     handle(req, res)
