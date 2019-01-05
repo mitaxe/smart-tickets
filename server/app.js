@@ -1,5 +1,6 @@
 const express = require('express')
 const next = require('next')
+const helmet = require('helmet')
 const api = require('./api')
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -8,6 +9,8 @@ const server = express()
 const handle = app.getRequestHandler()
 
 function applyRoutes (server) {
+  server.use(helmet())
+
   server.get('/_next/*', (req, res) => {
     handle(req, res)
   })
