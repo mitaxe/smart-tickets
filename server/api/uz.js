@@ -7,7 +7,7 @@ router.get('/stations/:city', async (req, res) => {
     const stations = await uzApi.get(`train_search/station/?term=${encodeURIComponent(city)}`)
     res.send(stations)
   } catch (e) {
-    res.status(500).send([])
+    res.sendStatus(500)
   }
 })
 
