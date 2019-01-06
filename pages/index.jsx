@@ -5,12 +5,17 @@ import { api } from 'server/services/apiService'
 class Index extends React.Component {
   async componentDidMount () {
     const city = 'киев'
-    const stations = await api.get(`stations/${encodeURIComponent(city)}`)
+    let stations = []
+    try {
+      await api.get(`stations/${encodeURIComponent(city)}`)
+    } catch (e) {
+      console.info(e)
+    }
+
     console.log(stations)
   }
 
   render () {
-    console.log(this.props)
     return (
       <p>Hello world</p>
     )
