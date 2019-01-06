@@ -1,8 +1,8 @@
 const { API_VERSION } = require('server/constants/globals')
-const uz = require('./uz')
+const uzApi = require('./uz')
 
 function api (server) {
-  server.use(API_VERSION, uz)
+  server.use(API_VERSION, uzApi)
 }
 
 module.exports = api
