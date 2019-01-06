@@ -1,14 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-const fetch = require('isomorphic-unfetch')
+import { api } from 'server/services/apiService'
 
 class Index extends React.Component {
-  static async getInitialProps ({ req }) {
-    const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : ''
+  async componentDidMount () {
     const city = 'киев'
-    const stations = await fetch(`${baseUrl}/api/v1/stations/${encodeURIComponent(city)}`)
-    const json = await stations.json()
-    return { stations: json }
+    const stations = await api.get(`stations/${encodeURIComponent(city)}`)
+    console.log(stations)
   }
 
   render () {
