@@ -1,15 +1,13 @@
 const router = require('express').Router()
-const { UZ_HOST } = require('../constants/globals')
-const fetch = require('isomorphic-unfetch')
+const { uzApi } = require('server/services/apiService')
 
 router.get('/stations/:city', async (req, res) => {
   const { city } = req.params
   try {
-    const response = await fetch(`${UZ_HOST}/train_search/station/?term=${encodeURIComponent(city)}`)
-    const stations = await response.json()
+    const stations = await uzApi.get(`train_search/station/?term=${encodeURIComponent(city)}`)
     res.send(stations)
   } catch (e) {
-    res.status(500).send([])
+    res.sendStatus(500)
   }
 })
 
