@@ -40,7 +40,8 @@ class Api {
             return response.json()
           }
         } else {
-          throw response
+          const msg = `Request failed: ${response.url} - ${response.status}`
+          throw msg
         }
       })
       .catch(err => {
