@@ -4,12 +4,12 @@ pipeline {
 		stage ('startup') {
 		    steps {
 		        sh 'npm install'
-             }
+         }
 		}
 		stage ('test') {
 		    steps {
-          	    sh 'npm test'
-           }
+          sh 'npm test'
+        }
 		}
 	}
 }
