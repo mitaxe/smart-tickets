@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.stationForms {
+  display: flex;
+  min-width: 580px;
+  flex-basis: 40%;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 40px;
+}

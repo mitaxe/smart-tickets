@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+}
+
+.title {
+  font-size: 20px;
+  font-family: 'Arial';
+}
+
+.form {
+  margin-left: 16px;
+}
+
+.menu {
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.emptyMenu {
+  border: none;
+}
+
+.item {
+  font-family: 'Arial';
+  font-size: 12px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.activeItem { 
+  background: rgba(252, 209, 42, .8);
+}
